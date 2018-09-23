@@ -1,0 +1,57 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'navbar.scss';
+@import 'masthead.scss';
+@import 'buttons.scss';
+@import 'about.scss';
+@import 'projects.scss';
+@import 'slideshow.scss';
+@import 'tools.scss';
+@import 'signup.scss';
+@import 'contact.scss';
+
+body {
+  font-family: 'Nunito';
+  letter-spacing: 0.0625em;
+  font-family: 'Raleway', sans-serif;  
+}
+
+h3, h4, h5, h6 {
+  font-family: 'Domine', serif;  
+  
+}
+
+a {
+  color: $primary;
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: darken($primary, 20%);
+  }
+}
+
+.bg-black {
+  background-color: $black !important;
+}
+
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.text-primary {
+  color: $primary !important;
+}
+
+.section-heading {
+  font-size: 1.3rem;
+  line-height: 1.3125;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: $pink;
+  margin-top: 0;
+  font-family: 'Josefin Sans', sans-serif;  
+}
+
+footer {
+  padding: 5rem 0;
+}

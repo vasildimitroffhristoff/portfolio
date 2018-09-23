@@ -1,0 +1,15 @@
+.about-section {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  
+  background: $white;
+  h2 {
+    font-size: 3rem;
+    font-family: 'Josefin Sans', sans-serif;    
+  }
+  p {
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    color: $gray-700;
+  }
+}
