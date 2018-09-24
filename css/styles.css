@@ -1,7 +1,7 @@
 /*!
- * Start Bootstrap - Grayscale v5.0.1 (https://startbootstrap.com/template-overviews/grayscale)
+ * Start Bootstrap - VasilHristov v5.0.1 (https://startbootstrap.com/template-overviews/grayscale)
  * Copyright 2013-2018 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-portfolio/blob/master/LICENSE)
  */
 #mainNav {
   min-height: 56px;
@@ -11,8 +11,8 @@
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
-  color: #e91e63;
-  border: 1px solid #e91e63;
+  color: #eb4d4b;
+  border: 1px solid #eb4d4b;
 }
 
 #mainNav .navbar-toggler:focus {
@@ -48,12 +48,13 @@
     padding: .5rem 0;
     color: #161616;
     background-color: #fff;
-    width: 2.8rem;
+    width: 2.4rem;
     text-align: center;
+    border-radius: 3px;
   }
   #mainNav .navbar-brand i {
     display: block;
-    font-size: .9rem;
+    font-size: .7rem;
     line-height: 1rem;
     font-style: normal;
     font-family: 'Josefin Sans', sans-serif;
@@ -74,7 +75,10 @@
     box-shadow: 0 1px 8px rgba(22, 22, 22, 0.1);
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #161616;
+    background-color: #161616;
+  }
+  #mainNav.navbar-shrink .navbar-brand i {
+    color: #fff;
   }
   #mainNav.navbar-shrink .nav-link {
     color: #161616;
@@ -82,15 +86,15 @@
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #e91e63;
+    color: #eb4d4b;
   }
   #mainNav.navbar-shrink .nav-link:active {
-    color: #aa1145;
+    color: #d21a17;
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color: #e91e63;
+    color: #eb4d4b;
     outline: none;
-    border-bottom: 0.25rem solid #e91e63;
+    border-bottom: 0.25rem solid #eb4d4b;
   }
 }
 
@@ -100,7 +104,7 @@
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/2.jpeg");
+  background: linear-gradient(130deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.9) 40%, transparent 50%), url(../img/2.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -113,12 +117,22 @@
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
   color: #fff;
+  animation: fadeInLeft 1200ms;
+  animation-fill-mode: backwards;
 }
 
 .masthead h2 {
   max-width: 20rem;
   font-size: 1rem;
   color: #fff;
+  animation: fadeInRight 1000ms;
+  animation-fill-mode: backwards;
+}
+
+.masthead .btn {
+  animation: fadeInBottom 1000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 1300ms;
 }
 
 @media (min-width: 768px) {
@@ -134,16 +148,52 @@
     padding: 0;
   }
   .masthead h1 {
-    font-size: 3.5rem;
-    line-height: 3.5rem;
+    font-size: 3rem;
+    line-height: 3rem;
     letter-spacing: 0.7rem;
   }
   .masthead h2 {
     max-width: 30rem;
-    font-size: 1.15rem;
-    line-height: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
     color: #fff;
     font-weight: 300;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInBottom {
+  0% {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
 
@@ -151,29 +201,30 @@
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
   font-family: 'Varela Round';
-  font-size: 80%;
+  font-size: 65%;
   text-transform: uppercase;
-  letter-spacing: .15rem;
+  letter-spacing: .25rem;
   border: 0;
+  font-weight: 700;
 }
 
 .btn-primary {
-  background-color: #e91e63;
-  border-radius: 0;
-  padding: 1rem 1.8rem;
+  background-color: #eb4d4b;
+  border-radius: 3px;
+  padding: .9rem 1.2rem;
 }
 
 .btn-primary:hover {
-  background-color: #c1134e;
+  background-color: #ea4442;
 }
 
 .btn-primary:focus {
-  background-color: #c1134e;
+  background-color: #e93f3d;
   color: white;
 }
 
 .btn-primary:active {
-  background-color: #aa1145 !important;
+  background-color: #ea4442 !important;
 }
 
 .about-section {
@@ -200,7 +251,7 @@
 }
 
 .projects-section .nav-link.active {
-  background-color: #e91e63;
+  background-color: #eb4d4b;
   color: #fff;
 }
 
@@ -217,7 +268,7 @@
 @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #e91e63;
+    border-left: 0.5rem solid #eb4d4b;
   }
 }
 
@@ -231,7 +282,7 @@
     padding: 5rem;
   }
   .projects-section .project-text hr {
-    border-color: #e91e63;
+    border-color: #eb4d4b;
     border-width: .25rem;
     width: 30%;
   }
@@ -600,6 +651,12 @@ button:focus,
   color: #495057;
 }
 
+.tools-section img {
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
 .signup-section {
   padding: 10rem 0;
   background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.7) 55%, #161616 100%), url("../img/3.jpeg");
@@ -636,7 +693,7 @@ button:focus,
 }
 
 .contact-section .card hr {
-  border-color: #e91e63;
+  border-color: #eb4d4b;
   border-width: 0.25rem;
   width: 3rem;
 }
@@ -674,12 +731,12 @@ h3, h4, h5, h6 {
 }
 
 a {
-  color: #e91e63;
+  color: #eb4d4b;
 }
 
 a:focus, a:hover {
   text-decoration: none;
-  color: #930e3b;
+  color: #bb1715;
 }
 
 .bg-black {
@@ -687,19 +744,19 @@ a:focus, a:hover {
 }
 
 .bg-primary {
-  background-color: #e91e63 !important;
+  background-color: #eb4d4b !important;
 }
 
 .text-primary {
-  color: #e91e63 !important;
+  color: #eb4d4b !important;
 }
 
 .section-heading {
-  font-size: 1.3rem;
-  line-height: 1.3125;
+  font-size: .75rem;
+  line-height: 1.26125;
   text-transform: uppercase;
-  letter-spacing: 0.25rem;
-  color: #e91e63;
+  letter-spacing: 1em;
+  color: #eb4d4b;
   margin-top: 0;
   font-family: 'Josefin Sans', sans-serif;
 }
