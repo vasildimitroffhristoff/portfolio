@@ -6,11 +6,10 @@
 	--color-text: #fff;
 	--color-bg: #0c0c0c;
 	--color-link: #fff;
-	--color-link-hover: #e91e63;
+	--color-link-hover: #eb4d4b;
 	--color-reveal: var(--color-bg);
 	--color-title: #fff;
 	--color-nav: #fff;
-	// font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     min-height: 90vh;
     height: 90vh;
 	color: #57585c;
@@ -42,7 +41,6 @@ button:focus,
 	width: 100%;
 	margin: 3.5rem 0 0 0;
 	padding: 0 0 3.5rem 0;
-	pointer-events: none;
 	overflow: hidden;
 }
 
@@ -87,7 +85,6 @@ button:focus,
 
 .slide__img::after {
 	content: '';
-	background: rgba(22, 63, 191, 0.62);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -195,8 +192,8 @@ button:focus,
 	border: 0;
 	background: none;
 	padding: 2rem 1rem 1rem 1rem;
-  transition: 0.3s transform;
-  outline: none;
+    transition: 0.3s transform;
+    outline: none;
 }
 
 .slidenav__preview:hover {
@@ -239,11 +236,12 @@ button:focus,
 	background-size: cover;
 	background-position: 50% 50%;
 	backface-visibility: hidden;
+	opacity: .1;
+	filter: blur(3px);
 }
 
 .preview__img::after {
 	content: '';
-	background: rgba(22, 63, 191, 0.62);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -265,9 +263,9 @@ button:focus,
 }
 
 .preview__content {
-	// column-count: 2;
+	column-count: 2;
 	position: relative;
-	// text-align: justify;
+	text-align: justify;
 	opacity: 0;
 	padding: 0 1rem;
 }
@@ -276,6 +274,24 @@ button:focus,
 	margin: 0;
 }
 
+.slide {
+	pointer-events: none !important;
+}
+
+.slide .slide__title{
+	pointer-events: none !important;
+}
+.slide .preview__title a{
+	pointer-events: auto !important;
+	font-size: .7rem;
+	display: block;
+	margin-top: .4rem;
+	font-family: 'Raleway', sans-serif; 
+	font-weight: 700;
+	text-align: center;
+	opacity: .8;
+	letter-spacing: 3px;
+}
 
 @media screen and (min-width: 53em) {
 	body {

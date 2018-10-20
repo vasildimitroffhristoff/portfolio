@@ -1,21 +1,36 @@
 .masthead {
   position: relative;
   width: 100%;
-  height: auto;
-  min-height: 35rem;
-  padding: 15rem 0;
-  background: linear-gradient(180deg,transparent 50%,#181818 80%,#181818 95%),url(../img/2.jpeg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: 70%;
+  height: 100vh;
   background-color: #181818;
   backface-visibility: hidden;
+  overflow: hidden;
   &-content {
     position: absolute;
     bottom: 3rem;
     left: 0;
     right: 0;
+    z-index: 3;
+  }
+  &-imagebg-overlay {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg,transparent 50%,#181818 80%,#181818 95%);
+    z-index: 2;
+  }
+  &-imagebg {
+    background-position: 90px center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 88%;
+    background-image:url(../img/2.jpeg);
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    z-index: 1;
+    animation: fadeImage 3000ms;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-out;
   }
   h1 {
     font-family: 'Josefin Sans', sans-serif;
@@ -36,6 +51,42 @@
     color: $white;   
     animation: fadeInRight 1000ms;
     animation-fill-mode: forwards;
+  }
+  h3 {
+    background-color: transparent;
+    border-radius: 0px;
+    color:$primary;
+    font-size: .7rem;
+    display: inline-block;
+    font-family: 'Varela Round';
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    backface-visibility: hidden;
+  
+    b {
+      animation: fadeInRight 1000ms;
+      animation-fill-mode: backwards;
+      animation-delay: 2300ms;
+      letter-spacing: .23rem;
+      animation-timing-function: ease-out;
+  
+    font-family: 'Josefin Sans',sans-serif;
+    }
+  
+    &:hover {
+      background-color: transparent;
+      outline: none;  
+    }
+    &:focus {
+      background-color: transparent;
+      color: white;
+      outline: none;
+    }
+    &:active {
+      background-color: transparent !important;
+      outline: none;
+    }
   }
   .btn {
     animation: fadeInRight 1000ms;
@@ -65,6 +116,20 @@
       font-weight: 300;
     }
   }
+
+  @media(max-width: 767px) {
+    &-imagebg {
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      left: 0;
+      opacity: .5;
+    }
+    h1 {
+      font-size: 1.5rem;
+      letter-spacing: .3rem;
+    }
+  }
 }
 
 @keyframes fadeInLeft {
@@ -73,7 +138,12 @@
 }
 
 @keyframes fadeInRight {
-  0% { transform: translate(-60px,0); opacity: 0; }
-  80% { transform: translate(30px,0); opacity: 1; }
+  0% { transform: translate(-70px,0); opacity: 0; }
   100% { transform: translate(0px,0); opacity: 1; }
+}
+
+@keyframes fadeImage {
+  0% {  opacity: 0; }
+  60% {  opacity: .8; }
+  100% { opacity: 1; }
 }

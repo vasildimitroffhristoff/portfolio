@@ -2,6 +2,7 @@
 @import 'mixins.scss';
 @import 'navbar.scss';
 @import 'masthead.scss';
+@import 'glitch.scss';
 @import 'buttons.scss';
 @import 'about.scss';
 @import 'projects.scss';
@@ -11,7 +12,6 @@
 @import 'contact.scss';
 
 body {
-  font-family: 'Nunito';
   letter-spacing: 0.0625em;
   font-family: 'Raleway', sans-serif;  
 }
