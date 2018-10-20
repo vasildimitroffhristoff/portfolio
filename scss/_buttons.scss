@@ -1,27 +1,41 @@
 .btn {
-  box-shadow: 0 .1875rem .1875rem 0 rgba(0,0,0,.1) !important;
-  padding: 1.25rem 2rem;
   font-family: 'Varela Round';
-  font-size: 65%;
-  text-transform: uppercase;
-  letter-spacing: .25rem;
+  font-size: 6%;
   border: 0;
+  text-transform: uppercase;
   font-weight: 700;
+  backface-visibility: hidden;
+
 }
 
 .btn-primary {
-  background-color: $primary;
-  // border: 1px solid darken($white,  70%);
-  border-radius: 3px;
-  padding: .9rem 1.2rem; 
+  background-color: transparent;
+  border-radius: 0px;
+  color:$primary;
+  font-size: .7rem;
+  display: block;
+
+  b {
+    animation: fadeInRight 1000ms;
+    animation-fill-mode: backwards;
+    animation-delay: 2300ms;
+  letter-spacing: .23rem;
+  animation-timing-function: ease-out;
+
+  font-family: 'Josefin Sans',sans-serif;
+  }
+
   &:hover {
-    background-color: darken($primary, 2%);
+    background-color: transparent;
+    outline: none;  
   }
   &:focus {
-    background-color: darken($primary, 3%);
+    background-color: transparent;
     color: white;
+    outline: none;
   }
   &:active {
-    background-color: darken($primary, 2%) !important;
+    background-color: transparent !important;
+    outline: none;
   }
 }

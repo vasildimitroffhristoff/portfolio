@@ -4,35 +4,44 @@
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  // background: linear-gradient(to bottom, #{fade-out($black, .9)} 0%,#{fade-out($black, .5)} 75%,$black 100%), url('../img/2.jpeg');
-  background: linear-gradient(130deg, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, .9) 40%, transparent 50%),url(../img/2.jpeg);
+  background: linear-gradient(180deg,transparent 50%,#181818 80%,#181818 95%),url(../img/2.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-size: cover;
+  background-size: 70%;
+  background-color: #181818;
+  backface-visibility: hidden;
+  &-content {
+    position: absolute;
+    bottom: 3rem;
+    left: 0;
+    right: 0;
+  }
   h1 {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 2.5rem;
     line-height: 2.5rem;
     letter-spacing: 0.8rem;
-    // background: -webkit-linear-gradient(fade-out(white, 0.3), fade-out(white, 1));
-    // -webkit-text-fill-color: transparent;
-    // -webkit-background-clip: text;
+    background: -webkit-linear-gradient(fade-out(white, 0.3), fade-out(white, 1));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     color: $white;
-    animation: fadeInLeft 1200ms;
+    animation: fadeInLeft 1300ms;
     animation-fill-mode: backwards;
+    animation-timing-function: ease-out;
   }
   h2 {
     max-width: 20rem;
     font-size: 1rem;
     color: $white;   
     animation: fadeInRight 1000ms;
-    animation-fill-mode: backwards;
+    animation-fill-mode: forwards;
   }
   .btn {
-    animation: fadeInBottom 1000ms;
+    animation: fadeInRight 1000ms;
     animation-fill-mode: backwards;
     animation-delay: 1300ms;
+    animation-timing-function: ease-out;
   }
   @media(min-width: 768px) {
     h1 {
@@ -44,9 +53,9 @@
     height: 100vh;
     padding: 0;
     h1 {
-      font-size: 3rem;
-      line-height: 3rem;
-      letter-spacing: 0.7rem;
+      font-size: 2rem;
+      line-height: 2rem;
+      letter-spacing: 0.8rem;
     }
     h2 {
       max-width: 30rem;
@@ -59,17 +68,12 @@
 }
 
 @keyframes fadeInLeft {
-  0% { transform: translateX(-60px); opacity: 0; }
-  100% { transform: translateX(0px); opacity: 1; }
+  0% {  opacity: 0; }
+  100% { opacity: 1; }
 }
 
 @keyframes fadeInRight {
-  0% { transform: translateX(60px); opacity: 0; }
-  100% { transform: translateX(0px); opacity: 1; }
-}
-
-@keyframes fadeInBottom {
-  0% { transform: translateY(60px); opacity: 0; }
-  90% { transform: translateY(-8px); }
-  100% { transform: translateY(0px); opacity: 1; }
+  0% { transform: translate(-60px,0); opacity: 0; }
+  80% { transform: translate(30px,0); opacity: 1; }
+  100% { transform: translate(0px,0); opacity: 1; }
 }

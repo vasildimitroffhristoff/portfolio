@@ -45,16 +45,15 @@
     transition: background-color 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
-    padding: .5rem 0;
     color: #161616;
     background-color: #fff;
-    width: 2.4rem;
+    width: 2.5rem;
+    height: 2.5rem;
     text-align: center;
-    border-radius: 3px;
   }
   #mainNav .navbar-brand i {
     display: block;
-    font-size: .7rem;
+    font-size: .8rem;
     line-height: 1rem;
     font-style: normal;
     font-family: 'Josefin Sans', sans-serif;
@@ -84,6 +83,7 @@
     color: #161616;
     padding: 1.5rem 1.5rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
+    font-size: 12px;
   }
   #mainNav.navbar-shrink .nav-link:hover {
     color: #eb4d4b;
@@ -104,11 +104,20 @@
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(130deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.9) 40%, transparent 50%), url(../img/2.jpeg);
+  background: linear-gradient(180deg, transparent 50%, #181818 80%, #181818 95%), url(../img/2.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-size: cover;
+  background-size: 70%;
+  background-color: #181818;
+  backface-visibility: hidden;
+}
+
+.masthead-content {
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
+  right: 0;
 }
 
 .masthead h1 {
@@ -116,9 +125,13 @@
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   color: #fff;
-  animation: fadeInLeft 1200ms;
+  animation: fadeInLeft 1300ms;
   animation-fill-mode: backwards;
+  animation-timing-function: ease-out;
 }
 
 .masthead h2 {
@@ -126,13 +139,14 @@
   font-size: 1rem;
   color: #fff;
   animation: fadeInRight 1000ms;
-  animation-fill-mode: backwards;
+  animation-fill-mode: forwards;
 }
 
 .masthead .btn {
-  animation: fadeInBottom 1000ms;
+  animation: fadeInRight 1000ms;
   animation-fill-mode: backwards;
   animation-delay: 1300ms;
+  animation-timing-function: ease-out;
 }
 
 @media (min-width: 768px) {
@@ -148,9 +162,9 @@
     padding: 0;
   }
   .masthead h1 {
-    font-size: 3rem;
-    line-height: 3rem;
-    letter-spacing: 0.7rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: 0.8rem;
   }
   .masthead h2 {
     max-width: 30rem;
@@ -163,68 +177,68 @@
 
 @keyframes fadeInLeft {
   0% {
-    transform: translateX(-60px);
     opacity: 0;
   }
   100% {
-    transform: translateX(0px);
     opacity: 1;
   }
 }
 
 @keyframes fadeInRight {
   0% {
-    transform: translateX(60px);
+    transform: translate(-60px, 0);
     opacity: 0;
   }
-  100% {
-    transform: translateX(0px);
+  80% {
+    transform: translate(30px, 0);
     opacity: 1;
   }
-}
-
-@keyframes fadeInBottom {
-  0% {
-    transform: translateY(60px);
-    opacity: 0;
-  }
-  90% {
-    transform: translateY(-8px);
-  }
   100% {
-    transform: translateY(0px);
+    transform: translate(0px, 0);
     opacity: 1;
   }
 }
 
 .btn {
-  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  padding: 1.25rem 2rem;
   font-family: 'Varela Round';
-  font-size: 65%;
-  text-transform: uppercase;
-  letter-spacing: .25rem;
+  font-size: 6%;
   border: 0;
+  text-transform: uppercase;
   font-weight: 700;
+  backface-visibility: hidden;
 }
 
 .btn-primary {
-  background-color: #eb4d4b;
-  border-radius: 3px;
-  padding: .9rem 1.2rem;
+  background-color: transparent;
+  border-radius: 0px;
+  color: #eb4d4b;
+  font-size: .7rem;
+  display: block;
+}
+
+.btn-primary b {
+  animation: fadeInRight 1000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 2300ms;
+  letter-spacing: .23rem;
+  animation-timing-function: ease-out;
+  font-family: 'Josefin Sans',sans-serif;
 }
 
 .btn-primary:hover {
-  background-color: #ea4442;
+  background-color: transparent;
+  outline: none;
 }
 
 .btn-primary:focus {
-  background-color: #e93f3d;
+  background-color: transparent;
   color: white;
+  outline: none;
 }
 
 .btn-primary:active {
-  background-color: #ea4442 !important;
+  background-color: transparent !important;
+  outline: none;
 }
 
 .about-section {
