@@ -610,10 +610,12 @@ button:focus,
   grid-template-rows: 100%;
   align-items: center;
   justify-items: center;
+  z-index: 1;
 }
 
 .slide--current {
   position: relative;
+  z-index: 100;
 }
 
 .slide__img-wrap {
@@ -939,12 +941,10 @@ button:focus,
 
 .tools-section img {
   filter: grayscale(20%);
-  opacity: .8;
 }
 
 .tools-section img:hover {
   opacity: 1;
-  filter: grayscale(0%);
 }
 
 .signup-section {
