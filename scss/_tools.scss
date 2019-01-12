@@ -1,13 +1,19 @@
 .tools-section {
     padding: 10rem 0;
+    .container {
+      max-width: 960px;
+      text-align: center;
+    }
     h2 {
         font-size: 3rem;
         font-family: 'Josefin Sans', sans-serif;    
       }
       p {
         margin-bottom: 2rem;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         color: $gray-700;
+        line-height: 2.2rem;
+        text-align: justify;
       }
 
       img {
@@ -15,6 +21,20 @@
 
         &:hover {
           opacity: 1;
+        }
+      }
+
+      .tech-icons {
+        // max-width: 700px;
+        padding-left: 220px;
+        padding-right: 220px;
+        height: 45px;
+        svg {
+          font-size: 36px;
+          transition: all 150ms ease-in-out; 
+          &:hover {
+            font-size: 45px;
+          }
         }
       }
 }

@@ -1,6 +1,11 @@
 .about-section {
   padding-top: 10rem;
   padding-bottom: 10rem;
+  text-align: center;
+
+  .container {
+    max-width: 960px;
+  }
   
   background: $white;
   h2 {
@@ -9,7 +14,25 @@
   }
   p {
     margin-bottom: 2rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: $gray-700;
+    line-height: 2.2rem;
+    text-align: justify;
+  }
+
+  .cv-box {
+    font-size: .6rem;
+    line-height: 20px;
+    color: #535c68;
+    padding: 10px 20px;
+    transition: all 100ms ease-in;
+    font-weight: 700;
+    text-transform: uppercase;
+    &__icon {
+      font-size: 1.6rem;
+      position: relative;
+      margin-right: .5rem;
+    }
+
   }
 }

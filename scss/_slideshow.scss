@@ -116,7 +116,7 @@ button:focus,
 .slide__title {
 	margin: 0;
 	grid-area: 1 / 1 / 1 / 1;
-	font-size: 10vw;
+	font-size: 7vw;
 	color: var(--color-title);
 	position: relative;
 	margin-bottom: 1.25rem;
@@ -193,7 +193,7 @@ button:focus,
 	left: 50%;
 	border: 0;
 	background: none;
-	padding: 2rem 1rem 1rem 1rem;
+	padding: 2rem 1rem 2rem 1rem;
     transition: 0.3s transform;
     outline: none;
 }

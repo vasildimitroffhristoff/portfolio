@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - VasilHristov v5.0.1 (https://startbootstrap.com/template-overviews/grayscale)
- * Copyright 2013-2018 Start Bootstrap
+ * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-portfolio/blob/master/LICENSE)
  */
 #mainNav {
@@ -228,8 +228,8 @@
     padding: 0;
   }
   .masthead h1 {
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
     letter-spacing: 0.8rem;
   }
   .masthead h2 {
@@ -314,7 +314,7 @@
 }
 
 .glitch-3 {
-  color: #e91e63;
+  color: #dd455a;
   animation: glitch3 3s infinite ease-in-out;
   animation-delay: 2000ms;
 }
@@ -495,7 +495,12 @@
 .about-section {
   padding-top: 10rem;
   padding-bottom: 10rem;
+  text-align: center;
   background: #fff;
+}
+
+.about-section .container {
+  max-width: 960px;
 }
 
 .about-section h2 {
@@ -505,8 +510,26 @@
 
 .about-section p {
   margin-bottom: 2rem;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #495057;
+  line-height: 2.2rem;
+  text-align: justify;
+}
+
+.about-section .cv-box {
+  font-size: .6rem;
+  line-height: 20px;
+  color: #535c68;
+  padding: 10px 20px;
+  transition: all 100ms ease-in;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-section .cv-box__icon {
+  font-size: 1.6rem;
+  position: relative;
+  margin-right: .5rem;
 }
 
 .projects-section ul li {
@@ -672,7 +695,7 @@ button:focus,
 .slide__title {
   margin: 0;
   grid-area: 1 / 1 / 1 / 1;
-  font-size: 10vw;
+  font-size: 7vw;
   color: var(--color-title);
   position: relative;
   margin-bottom: 1.25rem;
@@ -749,7 +772,7 @@ button:focus,
   left: 50%;
   border: 0;
   background: none;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 2rem 1rem 2rem 1rem;
   transition: 0.3s transform;
   outline: none;
 }
@@ -928,6 +951,11 @@ button:focus,
   padding: 10rem 0;
 }
 
+.tools-section .container {
+  max-width: 960px;
+  text-align: center;
+}
+
 .tools-section h2 {
   font-size: 3rem;
   font-family: 'Josefin Sans', sans-serif;
@@ -935,8 +963,10 @@ button:focus,
 
 .tools-section p {
   margin-bottom: 2rem;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #495057;
+  line-height: 2.2rem;
+  text-align: justify;
 }
 
 .tools-section img {
@@ -945,6 +975,21 @@ button:focus,
 
 .tools-section img:hover {
   opacity: 1;
+}
+
+.tools-section .tech-icons {
+  padding-left: 220px;
+  padding-right: 220px;
+  height: 45px;
+}
+
+.tools-section .tech-icons svg {
+  font-size: 36px;
+  transition: all 150ms ease-in-out;
+}
+
+.tools-section .tech-icons svg:hover {
+  font-size: 45px;
 }
 
 .signup-section {
