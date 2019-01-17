@@ -153,9 +153,6 @@
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
   color: #fff;
   animation: fadeInLeft 1300ms;
   animation-fill-mode: backwards;
@@ -228,9 +225,9 @@
     padding: 0;
   }
   .masthead h1 {
-    font-size: 1.6rem;
-    line-height: 1.6rem;
-    letter-spacing: 0.8rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: 0.9rem;
   }
   .masthead h2 {
     max-width: 30rem;
@@ -510,10 +507,9 @@
 
 .about-section p {
   margin-bottom: 2rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #495057;
-  line-height: 2.2rem;
-  text-align: justify;
+  line-height: 1.8rem;
 }
 
 .about-section .cv-box {
@@ -963,18 +959,9 @@ button:focus,
 
 .tools-section p {
   margin-bottom: 2rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #495057;
-  line-height: 2.2rem;
-  text-align: justify;
-}
-
-.tools-section img {
-  filter: grayscale(20%);
-}
-
-.tools-section img:hover {
-  opacity: 1;
+  line-height: 1.8rem;
 }
 
 .tools-section .tech-icons {
@@ -983,13 +970,18 @@ button:focus,
   height: 45px;
 }
 
-.tools-section .tech-icons svg {
-  font-size: 36px;
-  transition: all 150ms ease-in-out;
+.tools-section .tech-icons__holder {
+  width: 45px;
+  height: 45px;
 }
 
-.tools-section .tech-icons svg:hover {
-  font-size: 45px;
+.tools-section .tech-icons__item {
+  transition: all 220ms ease-in-out;
+  font-size: 26px;
+}
+
+.tools-section .tech-icons__item:hover {
+  font-size: 32px;
 }
 
 .signup-section {

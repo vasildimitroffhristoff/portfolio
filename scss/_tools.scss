@@ -10,30 +10,25 @@
       }
       p {
         margin-bottom: 2rem;
-        font-size: 1.1rem;
+        font-size: 1rem;
         color: $gray-700;
-        line-height: 2.2rem;
-        text-align: justify;
-      }
-
-      img {
-        filter: grayscale(20%);
-
-        &:hover {
-          opacity: 1;
-        }
+        line-height: 1.8rem;
       }
 
       .tech-icons {
-        // max-width: 700px;
         padding-left: 220px;
         padding-right: 220px;
         height: 45px;
-        svg {
-          font-size: 36px;
-          transition: all 150ms ease-in-out; 
+        &__holder {
+          width: 45px;
+          height: 45px;
+        }
+
+        &__item {
+          transition: all 220ms ease-in-out; 
+          font-size: 26px;
           &:hover {
-            font-size: 45px;
+            font-size: 32px;
           }
         }
       }
