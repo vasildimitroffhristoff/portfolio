@@ -265,15 +265,15 @@ button:focus,
 }
 
 .preview__content {
-	column-count: 2;
 	position: relative;
-	text-align: justify;
+	text-align: center;
 	opacity: 0;
 	padding: 0 1rem;
 }
 
 .preview__content p {
 	margin: 0;
+	font-size: 15px;
 }
 
 .slide {
@@ -286,13 +286,17 @@ button:focus,
 .slide .preview__title a{
 	pointer-events: auto !important;
 	font-size: .7rem;
-	display: block;
 	margin-top: .4rem;
 	font-family: 'Raleway', sans-serif; 
 	font-weight: 700;
 	text-align: center;
 	opacity: .8;
-	letter-spacing: 3px;
+	// width: 30px;
+	// height: 30px;
+	// line-height: 30px;
+	padding: 6px 10px;
+	display: inline-block;
+	border: 1px solid #eb4d4b;
 }
 
 @media screen and (min-width: 53em) {

@@ -529,8 +529,8 @@
 }
 
 .about-section .cv-box {
-  font-size: .6rem;
-  line-height: 20px;
+  font-size: .65rem;
+  line-height: 1.6rem;
   color: #535c68;
   padding: 10px 20px;
   transition: all 100ms ease-in;
@@ -856,15 +856,15 @@ button:focus,
 }
 
 .preview__content {
-  column-count: 2;
   position: relative;
-  text-align: justify;
+  text-align: center;
   opacity: 0;
   padding: 0 1rem;
 }
 
 .preview__content p {
   margin: 0;
+  font-size: 15px;
 }
 
 .slide {
@@ -878,13 +878,14 @@ button:focus,
 .slide .preview__title a {
   pointer-events: auto !important;
   font-size: .7rem;
-  display: block;
   margin-top: .4rem;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   text-align: center;
   opacity: .8;
-  letter-spacing: 3px;
+  padding: 6px 10px;
+  display: inline-block;
+  border: 1px solid #eb4d4b;
 }
 
 @media screen and (min-width: 53em) {
