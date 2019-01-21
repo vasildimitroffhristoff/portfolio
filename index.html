@@ -47,9 +47,9 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#tools">Process</a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
             </li>
@@ -64,7 +64,13 @@
         <div class="masthead-imagebg"></div>
         <div class="masthead-imagebg-overlay"></div>
         <div class="masthead-content mx-auto text-center">
-          <h1 class="mx-auto my-0 text-uppercase">Vasil Hristov</h1>
+          <!-- <h1 class="mx-auto my-0 text-uppercase">Vasil Hristov</h1> -->
+          <!-- <h1 class="ml11 mx-auto my-0 text-uppercase">
+            <span class="text-wrapper">
+              <span class="letters">Vasil Hristov</span>
+            </span>
+          </h1> -->
+          <h1 class="ml12">Vasil Hristov</h1>
           <!-- <h2 class="mx-auto mt-2 mb-5">Bulgaria based front‑end developer focused on crafting clean & user‑friendly experiences.</h2> -->
           <h3 class="btn btn-primary js-scroll-trigger">  
             <span class="glitch-container">
@@ -88,7 +94,7 @@
         <div class="row">
           <div class="col-lg-12 mx-auto">
             <h2 class="mb-4">What about me...</h2>
-            <p class=""> <i style="text-decoration:line-through;font-size: 15px;">Currently I'm the Front-End Developer for <b>ShopSophea</b></i> .I'm web designer & front-end developer with 4 years of professional experience. I'm interested in all kinds of visual communication, but my major focus is on designing web, mobile & tablet interfaces. I also have skills in other fields like branding, icon design or web development.I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.I am dedicated, self-motivated, technical driven.</p>
+            <p class="">I'm web designer & front-end developer with 4 years of professional experience. I'm interested in all kinds of visual communication, but my major focus is on designing web, mobile & tablet interfaces. I also have skills in other fields like branding, icon design or web development.I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.I am dedicated, self-motivated, technical driven.</p>
             <p>I enjoy using my obsessive attention to detail, my unequivocal love for making things, and my mission-driven work ethic to literally change the world. </p>
           </div>
           <div class="col-lg-12 mx-auto mt-5">
@@ -359,12 +365,32 @@
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="js/imagesloaded.pkgd.min.js"></script>
 		<script src="js/TweenMax.min.js"></script>
-		<script src="js/demo.js"></script>
+		<script src="js/slider.js"></script>
     <script src="js/scripts.min.js"></script>
     <script src="//code.iconify.design/1/1.0.0-rc5/iconify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <script>$(function () {
         $('[data-toggle="tooltip"]').tooltip()
-      })</script>
+      })
+
+  $('.ml12').each(function(){
+    $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+  });
+
+  anime.timeline({loop: false})
+    .add({
+      targets: '.ml12 .letter',
+      translateX: [40,0],
+      translateZ: 0,
+      opacity: [0,1],
+      easing: "easeOutExpo",
+      duration: 1200,
+      delay: function(el, i) {
+        return 500 + 30 * i;
+      }
+    })
+
+      </script>
   </body>
 
 </html>

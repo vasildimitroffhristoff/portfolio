@@ -25,10 +25,10 @@
         }
 
         &__item {
-          transition: all 220ms ease-in-out; 
-          font-size: 26px;
+          transition: all 150ms ease-in; 
+          font-size: 32px;
           &:hover {
-            font-size: 32px;
+            font-size: 36px;
           }
         }
       }

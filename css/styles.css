@@ -118,9 +118,24 @@
   overflow: hidden;
 }
 
+.masthead .ml12 {
+  text-transform: uppercase;
+  letter-spacing: 0.85em;
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 300;
+  position: relative;
+  top: 5px;
+}
+
+.masthead .ml12 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
 .masthead-content {
   position: absolute;
-  bottom: 3rem;
+  bottom: 2rem;
   left: 0;
   right: 0;
   z-index: 3;
@@ -142,6 +157,7 @@
   height: 100%;
   width: 80%;
   position: absolute;
+  left: 10%;
   z-index: 1;
   animation: fadeImage 3000ms;
   animation-fill-mode: backwards;
@@ -976,12 +992,12 @@ button:focus,
 }
 
 .tools-section .tech-icons__item {
-  transition: all 220ms ease-in-out;
-  font-size: 26px;
+  transition: all 150ms ease-in;
+  font-size: 32px;
 }
 
 .tools-section .tech-icons__item:hover {
-  font-size: 32px;
+  font-size: 36px;
 }
 
 .signup-section {
