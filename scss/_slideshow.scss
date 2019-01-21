@@ -299,7 +299,7 @@ button:focus,
 	border: 1px solid #eb4d4b;
 }
 
-@media screen and (min-width: 53em) {
+// @media screen and (min-width: 53em) {
 	body {
 		padding: 0;
 	}
@@ -371,5 +371,5 @@ button:focus,
 	.preview__img::after {
 		display: none;
 	}
-}
+// }
 

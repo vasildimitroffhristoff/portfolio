@@ -1,5 +1,9 @@
 .tools-section {
     padding: 10rem 0;
+    @media(max-width: 767px) {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
     .container {
       max-width: 960px;
       text-align: center;
@@ -7,6 +11,9 @@
     h2 {
         font-size: 3rem;
         font-family: 'Josefin Sans', sans-serif;    
+        @media(max-width: 767px) {
+          font-size: 2.5rem;
+        } 
       }
       p {
         margin-bottom: 2rem;
@@ -19,6 +26,11 @@
         padding-left: 220px;
         padding-right: 220px;
         height: 45px;
+
+        @media(max-width: 992px) {
+          padding-left: 0px;
+          padding-right: 0px;
+        }
         &__holder {
           width: 45px;
           height: 45px;
