@@ -9,12 +9,23 @@
   // heading animation
   .ml12 {
     text-transform: uppercase;
-    letter-spacing: 0.85em;
+    letter-spacing: 0.6em;
     margin: 0;
-    font-size: 1.4rem;
-    font-weight: 300;
+    font-size: .9rem;
+    line-height: 2.5rem;
+    font-weight: 700;
     position: relative;
-    top:5px;
+
+
+    &.sub {
+      letter-spacing:0.2em; 
+      font-size: 10px !important;
+      position: relative;
+      text-transform: uppercase;
+      top:-10px;
+      color:#aaa;
+      font-weight: 300;
+    }
   }
   
   .ml12 .letter {
@@ -24,7 +35,7 @@
 
   &-content {
     position: absolute;
-    bottom: 2rem;
+    bottom: 1.6rem;
     left: 0;
     right: 0;
     z-index: 3;
@@ -32,14 +43,14 @@
   &-imagebg-overlay {
     height: 100%;
     width: 100%;
-    background: linear-gradient(180deg,transparent 50%,#181818 80%,#181818 95%);
+    background: linear-gradient(180deg,transparent 50%,#181818 74%,#181818 100%);
     z-index: 2;
   }
   &-imagebg {
-    background-position: 90px center;
+    background-position: 60% 20%;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-size: 88%;
+    background-size: 75%;
     background-image:url(../img/2.jpeg);
     height: 100%;
     width: 80%;
@@ -48,7 +59,7 @@
     z-index: 1;
     animation: fadeImage 3000ms;
     animation-fill-mode: backwards;
-    animation-timing-function: ease-out;
+    animation-timing-function: ease-in;
   }
 
   h1 {
@@ -60,7 +71,7 @@
     // -webkit-text-fill-color: transparent;
     // -webkit-background-clip: text;
     color: $white;
-    animation: fadeInLeft 1300ms;
+    animation: fadeIn 1300ms;
     animation-fill-mode: backwards;
     animation-timing-function: ease-out;
   }
@@ -89,8 +100,7 @@
       animation-delay: 2300ms;
       letter-spacing: .23rem;
       animation-timing-function: ease-out;
-  
-    font-family: 'Josefin Sans',sans-serif;
+      font-family: 'Josefin Sans',sans-serif;
     }
   
     &:hover {
@@ -107,12 +117,43 @@
       outline: none;
     }
   }
-  .btn {
+  .masthead-text-animation {
     animation: fadeInRight 1000ms;
-    animation-fill-mode: backwards;
-    animation-delay: 1300ms;
-    animation-timing-function: ease-out;
+    
+    &-stack {
+      font-size: 32px;
+
+      b {
+        margin-right: 25px;
+        display: inline-block;
+        transition: all .3s ease-in-out;
+        transform-origin: 50% 50%;
+
+        &:nth-last-of-type(1) {
+          animation-fill-mode: backwards;
+          animation-delay: 2500ms;
+          animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        &:nth-last-of-type(2) {
+          animation-fill-mode: backwards;
+          animation-delay: 2200ms;
+          animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        &:nth-last-of-type(3) {
+          animation-fill-mode: backwards;
+          animation-delay: 1900ms;
+          animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        &:last-of-type {margin-right: 0;}
+        &:hover {
+          transform: translate(0, -10px) rotate(30deg);
+        }
+      }
+    }
   }
+  
   @media(min-width: 768px) {
     h1 {
       font-size: 2rem;
@@ -161,13 +202,20 @@
   }
 }
 
-@keyframes fadeInLeft {
-  0% {  opacity: 0; }
-  100% { opacity: 1; }
+.fade-in {
+  animation: fadeInUp 800ms;
+  animation-fill-mode: backwards;
+  animation-delay: 1000ms;
+  animation-timing-function: ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {  opacity: 0; transform: translate(0,-7px)}
+  100% {  opacity: 1; transform: translate(0,0px)}
 }
 
 @keyframes fadeInRight {
-  0% { transform: translate(-70px,0); opacity: 0; }
+  0% { transform: translate(15px,0); opacity: 0; }
   100% { transform: translate(0px,0); opacity: 1; }
 }
 

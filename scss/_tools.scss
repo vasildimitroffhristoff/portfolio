@@ -32,15 +32,19 @@
           padding-right: 0px;
         }
         &__holder {
-          width: 45px;
+          width: 50px;
           height: 45px;
         }
 
         &__item {
           transition: all 150ms ease-in; 
-          font-size: 32px;
+          font-size: 26px;
+          opacity: .6;
+          filter: grayscale(100%);
+
           &:hover {
-            font-size: 36px;
+            filter: grayscale(0%); 
+            opacity: 1;
           }
         }
       }

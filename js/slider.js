@@ -26,8 +26,11 @@
 				imgWrap: this.DOM.el.querySelector('.preview__img-wrap'),
 				revealer: this.DOM.el.querySelector('.preview__img-wrap > .preview__img-reveal'),
 				title: this.DOM.el.querySelector('.preview__title'),
-				content: this.DOM.el.querySelector('.preview__content')
+				content: this.DOM.el.querySelector('.preview__content'),
+				link: this.DOM.el.querySelectorAll('.preview__project-link')
 			};
+
+			TweenLite.to(this.DOM.preview.link, 1, {autoAlpha:0, display:"none"});
 
 			// Some config values.
             this.config = {
@@ -133,6 +136,12 @@
 					y: action === 'hide' ? '200%' : '0%',
 					opacity: action === 'hide' ? 0 : 1
 				});
+				
+				TweenLite.to([this.DOM.preview.link], this.config.animation.duration , {
+					autoAlpha: action === 'hide' ? 0 : 1 , 
+					display: action === 'hide' ? "none" : "inline-block"
+				});
+
 			});
 		}
     }

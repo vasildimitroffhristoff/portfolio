@@ -284,7 +284,7 @@ button:focus,
 	pointer-events: none !important;
 }
 .slide .preview__title a{
-	pointer-events: auto !important;
+	pointer-events: auto;
 	font-size: .7rem;
 	margin-top: .4rem;
 	font-family: 'Raleway', sans-serif; 
@@ -294,9 +294,16 @@ button:focus,
 	// width: 30px;
 	// height: 30px;
 	// line-height: 30px;
-	padding: 6px 10px;
+	padding: 5px 10px;
 	display: inline-block;
 	border: 1px solid #eb4d4b;
+	border-radius: 2px;
+}
+
+
+.slide:not(.slide--current) .preview__title a {
+	pointer-events: none !important;
+    cursor: default;
 }
 
 // @media screen and (min-width: 53em) {
