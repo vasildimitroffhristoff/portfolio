@@ -2,6 +2,7 @@
   padding-top: 10rem;
   padding-bottom: 10rem;
   text-align: center;
+  background: $white;
 
   @media(max-width: 767px) {
     padding-top: 4rem;
@@ -12,7 +13,6 @@
     max-width: 960px;
   }
   
-  background: $white;
   h2 {
     font-size: 3rem;
     font-family: 'Josefin Sans', sans-serif;   
@@ -29,6 +29,23 @@
     color: $gray-700;
     line-height:1.8rem;
     text-align-last: center;
+  }
+
+  .text-greeting {
+    border-bottom:2px solid #eee;
+    padding:7px 10px;
+    background:#f5f5f5;
+    color:#777;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8px;
+    font-weight: normal;
+
+    @media (max-width: 767px) {
+      display: block;
+      padding: 5px;
+      line-height: 18px;
+      margin-top:15px;
+    }
   }
 
   .cv-box {

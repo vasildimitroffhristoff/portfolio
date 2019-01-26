@@ -300,7 +300,7 @@
 
 @media (max-width: 767px) {
   .masthead {
-    height: 90vh;
+    height: 92vh;
   }
   .masthead-imagebg {
     background-position: center;
@@ -583,6 +583,25 @@
   color: #495057;
   line-height: 1.8rem;
   text-align-last: center;
+}
+
+.about-section .text-greeting {
+  border-bottom: 2px solid #eee;
+  padding: 7px 10px;
+  background: #f5f5f5;
+  color: #777;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 8px;
+  font-weight: normal;
+}
+
+@media (max-width: 767px) {
+  .about-section .text-greeting {
+    display: block;
+    padding: 5px;
+    line-height: 18px;
+    margin-top: 15px;
+  }
 }
 
 .about-section .cv-box {
