@@ -299,6 +299,9 @@
 }
 
 @media (max-width: 767px) {
+  .masthead {
+    height: 90vh;
+  }
   .masthead-imagebg {
     background-position: center;
     background-size: cover;

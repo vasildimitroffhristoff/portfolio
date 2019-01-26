@@ -67,9 +67,6 @@
     font-size: 2.5rem;
     line-height: 2.5rem;
     letter-spacing: 0.8rem;
-    // background: -webkit-linear-gradient(fade-out(white, 0.3), fade-out(white, 1));
-    // -webkit-text-fill-color: transparent;
-    // -webkit-background-clip: text;
     color: $white;
     animation: fadeIn 1300ms;
     animation-fill-mode: backwards;
@@ -178,6 +175,7 @@
   }
 
   @media(max-width: 767px) {
+    height: 90vh;
     &-imagebg {
       background-position: center;
       background-size: cover;
