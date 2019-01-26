@@ -573,7 +573,7 @@
 
 @media (max-width: 767px) {
   .about-section h2 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -1076,7 +1076,7 @@ body {
 
 @media (max-width: 767px) {
   .tools-section h2 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -1124,6 +1124,16 @@ body {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+}
+
+@media (max-width: 767px) {
+  .signup-section {
+    padding: 4rem 0;
+  }
+  .signup-section h2 {
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+  }
 }
 
 .signup-section .form-inline input {
