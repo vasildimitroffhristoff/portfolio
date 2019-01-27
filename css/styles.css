@@ -1081,7 +1081,7 @@ body {
 }
 
 .tools-section p {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-size: 1rem;
   color: #495057;
   line-height: 1.8rem;
@@ -1115,6 +1115,14 @@ body {
 .tools-section .tech-icons__item:hover {
   filter: grayscale(0%);
   opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .tools-section .tech-icons__item {
+    filter: grayscale(0%);
+    font-size: 20px;
+    opacity: 1;
+  }
 }
 
 .signup-section {

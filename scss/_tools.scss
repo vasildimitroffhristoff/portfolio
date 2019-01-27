@@ -16,7 +16,7 @@
         } 
       }
       p {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         font-size: 1rem;
         color: $gray-700;
         line-height: 1.8rem;
@@ -44,6 +44,12 @@
 
           &:hover {
             filter: grayscale(0%); 
+            opacity: 1;
+          }
+
+          @media (max-width: 767px) {
+            filter: grayscale(0%);
+            font-size: 20px;
             opacity: 1;
           }
         }
